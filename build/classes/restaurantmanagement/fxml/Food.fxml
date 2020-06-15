@@ -1,0 +1,1147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNAvatarView?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="restaurantmanagement.controllers.FoodController">
+   <children>
+      <AnchorPane fx:id="othersPane" layoutX="220.0" layoutY="2.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="75.0" prefHeight="71.0" prefWidth="745.0" spacing="15.0" stylesheets="@../css/helpers.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="253.0">
+               <children>
+                  <GridPane style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Males" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="maleEmployeeText" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="CENTER" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="MALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Females" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="femaleEmployeeText" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="RIGHT" wrappingWidth="46.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="FEMALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employees" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalEmployeeText" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="400" textAlignment="RIGHT" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <MaterialDesignIconView fill="#f7ca3d" glyphName="HUMAN_MALE_FEMALE" size="60" wrappingWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </MaterialDesignIconView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Other Foods">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="intercontinentalPane" layoutX="230.0" layoutY="58.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="75.0" prefHeight="71.0" prefWidth="745.0" spacing="15.0" stylesheets="@../css/helpers.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="253.0">
+               <children>
+                  <GridPane style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="maleEmployeeText1" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="CENTER" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="MALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="femaleEmployeeText1" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="RIGHT" wrappingWidth="46.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="FEMALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fx:id="totalDayStock" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="400" textAlignment="RIGHT" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <MaterialDesignIconView fill="#f7ca3d" glyphName="HUMAN_MALE_FEMALE" size="60" wrappingWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </MaterialDesignIconView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Intercontinental Dishes">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="africanDishPane" layoutX="230.0" layoutY="58.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="75.0" prefHeight="71.0" prefWidth="745.0" spacing="15.0" stylesheets="@../css/helpers.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="253.0">
+               <children>
+                  <GridPane style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumDrinks" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="CENTER" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="MALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumFood" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="RIGHT" wrappingWidth="46.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="FEMALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Stock" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumStock" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="400" textAlignment="RIGHT" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <MaterialDesignIconView fill="#f7ca3d" glyphName="HUMAN_MALE_FEMALE" size="60" wrappingWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </MaterialDesignIconView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="African Dishes">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="drinksPane" layoutX="230.0" layoutY="58.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="75.0" prefHeight="71.0" prefWidth="745.0" spacing="15.0" stylesheets="@../css/helpers.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="253.0">
+               <children>
+                  <GridPane style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumDrinks1" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="CENTER" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="MALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumFood1" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="RIGHT" wrappingWidth="46.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="FEMALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Sales" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumStock1" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="400" textAlignment="RIGHT" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <MaterialDesignIconView fill="#f7ca3d" glyphName="HUMAN_MALE_FEMALE" size="60" wrappingWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </MaterialDesignIconView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+            <Group AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="150.0">
+               <children>
+                  <VBox layoutX="10.0" layoutY="5.0" prefHeight="396.0" prefWidth="890.0" spacing="15.0">
+                     <children>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </Group>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sandwichesPane" layoutX="230.0" layoutY="58.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" visible="false" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <HBox layoutX="14.0" layoutY="75.0" prefHeight="71.0" prefWidth="745.0" spacing="15.0" stylesheets="@../css/helpers.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="253.0">
+               <children>
+                  <GridPane style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumDrinks11" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="CENTER" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="MALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumFood11" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="200" textAlignment="RIGHT" wrappingWidth="46.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <FontAwesomeIconView fill="#f7ca3d" glyphName="FEMALE" size="60" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </FontAwesomeIconView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Sales" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="totalNumStock11" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="400" textAlignment="RIGHT" wrappingWidth="47.983402743935585" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="15.0" top="4.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <MaterialDesignIconView fill="#f7ca3d" glyphName="HUMAN_MALE_FEMALE" size="60" wrappingWidth="55.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </MaterialDesignIconView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sandwiches">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+            <HBox layoutX="14.0" layoutY="177.0" prefHeight="170.0" prefWidth="477.0">
+               <children>
+                  <GridPane prefHeight="170.0" prefWidth="477.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="213.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="154.0" minWidth="10.0" prefWidth="132.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="132.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="172.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/1535381022192.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="86.13671875" GridPane.columnIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="cakeQuantity" focusColor="#86c01c" prefHeight="46.0" prefWidth="0.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                        <JFXButton onAction="#orderCake" prefHeight="37.0" prefWidth="111.0" style="-fx-background-color: #86C01C;" text="Order" textFill="WHITE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+                        <Text fx:id="cakePrice" fill="#938383" strokeType="OUTSIDE" strokeWidth="0.0" text="1500" wrappingWidth="86.13671875" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="cakeName" fill="#f7ca3d" layoutX="246.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cake" wrappingWidth="86.13671875" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="settingsPane" layoutX="220.0" layoutY="48.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" visible="false" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <MaterialDesignIconView fill="WHITE" glyphName="SETTINGS" layoutX="14.0" layoutY="34.0" size="27" text="" />
+               </children>
+            </Pane>
+            <AnchorPane layoutX="14.0" layoutY="73.0" prefHeight="389.0" prefWidth="985.0" style="-fx-background-color: #fff; -fx-background-radius: 6;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="73.0">
+               <children>
+                  <TextField fx:id="OldPasswordTxtF" layoutX="14.0" layoutY="93.0" prefHeight="42.0" prefWidth="443.0" style="-fx-background-color: #E3E3E3; -fx-background-radius: 10; -fx-text-fill: #2B2733;">
+                     <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                     </font>
+                  </TextField>
+                  <Text fill="#b1a7aa" layoutX="14.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Old Password">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#b1a7aa" layoutX="14.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#f7ca3d" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="21.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="14.0" layoutY="45.0" prefHeight="3.0" prefWidth="173.0" />
+                  <Text fill="#b1a7aa" layoutX="14.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm New Password">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="19.0" />
+                     </font>
+                  </Text>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="14.0" layoutY="337.0" onAction="#saveAction" prefHeight="29.0" prefWidth="136.0" style="-fx-background-color: #86C01C; -fx-background-radius: 10;" text="Save" textFill="#f0eff2">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#f4f5f3" glyphName="SAVE" size="20" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <TextField fx:id="NewPasswordTxtF" layoutX="14.0" layoutY="182.0" prefHeight="42.0" prefWidth="443.0" style="-fx-background-color: #E3E3E3; -fx-background-radius: 10; -fx-text-fill: #2B2733;">
+                     <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="ConfirmPasswordTxtF" layoutX="14.0" layoutY="272.0" prefHeight="42.0" prefWidth="443.0" style="-fx-background-color: #E3E3E3; -fx-background-radius: 10; -fx-text-fill: #2B2733;">
+                     <font>
+                        <Font name="Montserrat Regular" size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ordersPane" layoutX="240.0" layoutY="68.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: E9E9E9;" visible="false" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <Pane layoutX="669.0" layoutY="163.0" prefHeight="493.0" prefWidth="290.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 0 20 5 0; -fx-border-color: #F3F3F3; -fx-border-width: 0 0 0 2;" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <Pane prefHeight="128.0" prefWidth="291.0" style="-fx-background-color: orange; -fx-background-radius: 0 20 0 0;" />
+                  <Separator layoutX="56.0" layoutY="287.0" prefHeight="3.0" prefWidth="211.0" />
+                  <JFXButton fx:id="removeItems" buttonType="RAISED" contentDisplay="CENTER" layoutX="175.0" layoutY="320.0" onAction="#removeAllOrderedItems" style="-fx-background-color: #fff; -fx-background-radius: 10;" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView fill="#86c01c" glyphName="USER_PLUS" size="20" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Remove All Items" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="checkOut" buttonType="RAISED" contentDisplay="CENTER" layoutX="231.0" layoutY="320.0" onAction="#proceedToCheckOut" prefHeight="30.0" prefWidth="34.0" style="-fx-background-color: #fff; -fx-background-radius: 10;" text=" ">
+                     <graphic>
+                        <MaterialDesignIconView fill="#86c01c" glyphName="PENCIL" size="20" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Proceed to Checkout" />
+                     </tooltip>
+                  </JFXButton>
+                  <GNAvatarView fx:id="orderedImage" layoutX="93.0" layoutY="78.0" prefHeight="128.0" prefWidth="127.0">
+                     <image>
+                        <Image url="@../images/user.png" />
+                     </image>
+                  </GNAvatarView>
+                  <JFXButton fx:id="removeItem" buttonType="RAISED" contentDisplay="CENTER" layoutX="118.0" layoutY="320.0" onAction="#removeOrderedItem" style="-fx-background-color: #fff; -fx-background-radius: 10;" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView fill="#86c01c" glyphName="USER_PLUS" size="20" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Remove Item" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="continueShop" buttonType="RAISED" contentDisplay="CENTER" layoutX="56.0" layoutY="320.0" onAction="#continueShopping" style="-fx-background-color: #fff; -fx-background-radius: 10;" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView fill="#86c01c" glyphName="STOCK" size="20" />
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Continue Shopping" />
+                     </tooltip>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Orders Details">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+            <TableView fx:id="ordersTable" prefHeight="488.0" prefWidth="602.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/Tables.css" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="311.0" AnchorPane.topAnchor="70.0">
+               <columns>
+                  <TableColumn fx:id="tOrderID" prefWidth="32.0" text="ID" />
+                  <TableColumn fx:id="tItemOrderedName" prefWidth="142.0" text="Item Name" />
+                  <TableColumn fx:id="tItemOrderedPrice" prefWidth="122.0" text="Price" />
+                  <TableColumn fx:id="tItemOrderedQuantity" prefWidth="132.0" text="Quantity" />
+                  <TableColumn fx:id="tItemOrderedAmount" prefWidth="132.0" text="Amount" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <StackPane fx:id="receiptModal" layoutX="20.0" layoutY="20.0" prefHeight="552.0" prefWidth="930.0" visible="false" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane maxHeight="500.0" maxWidth="788.0" prefHeight="500.0" prefWidth="788.0" style="-fx-background-color: #f9f9f9; -fx-background-radius: 20;">
+               <children>
+                  <Pane prefHeight="56.0" prefWidth="721.0" style="-fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318); -fx-background-radius: 20 20 0 0;" styleClass="elevator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="23.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receipt Details">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="734.0" layoutY="7.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #f1f1f1; -fx-background-radius: 50;">
+                           <children>
+                              <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="5.0" layoutY="6.0" onMousePressed="#exitReceiptModal" pickOnBounds="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <image>
+                                    <Image url="@../images/close5.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <JFXButton layoutX="611.0" layoutY="432.0" onAction="#printCustomerReceipt" prefHeight="36.0" style="-fx-background-color: #86C01C; -fx-background-radius: 15;" styleClass="elevator" text="Print Receipt" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton layoutX="135.0" layoutY="432.0" onAction="#calculateSale" prefHeight="36.0" prefWidth="104.0" style="-fx-background-color: #86C01C; -fx-background-radius: 15;" styleClass="elevator" text="Calculate" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <GridPane hgap="10.0" layoutX="19.0" layoutY="80.0" prefHeight="250.0" prefWidth="339.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="235.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text fill="#f7ca3d" strokeType="OUTSIDE" strokeWidth="0.0" text="Sales Attendant">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="receiptCash" focusColor="#86c01c" prefHeight="30.0" prefWidth="188.0" unFocusColor="#a8a5a5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="receiptCost" editable="false" focusColor="#86c01c" prefHeight="30.0" prefWidth="188.0" unFocusColor="#a8a5a5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fill="#f7ca3d" strokeType="OUTSIDE" strokeWidth="0.0" text="Cash Paid" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <JFXPasswordField fx:id="receiptBalance" editable="false" focusColor="#86c01c" unFocusColor="#a8a5a5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXTextField fx:id="receiptSalesAttendant" editable="false" focusColor="#86c01c" unFocusColor="#a8a5a5" GridPane.columnIndex="1" />
+                        <Text fill="#f7ca3d" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cost" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#f7ca3d" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <JFXScrollPane layoutX="423.0" layoutY="120.0" prefHeight="279.0" prefWidth="328.0">
+                     <children>
+                        <JFXTextArea fx:id="billTextArea" focusColor="WHITE" />
+                     </children>
+                  </JFXScrollPane>
+               </children>
+               <StackPane.margin>
+                  <Insets left="100.0" />
+               </StackPane.margin>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <VBox layoutX="-2.0" prefHeight="600.0" prefWidth="220.0" spacing="5.0" style="-fx-background-color: #86C01C;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GNAvatarView stroke="RED" style="-fx-background-color: white;" VBox.vgrow="NEVER">
+               <image>
+                  <Image url="@../images/Food%20Service_96px.png" />
+               </image>
+            </GNAvatarView>
+            <Text fill="#f7ca3d" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Jessy">
+               <VBox.margin>
+                  <Insets bottom="7.0" left="40.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="dashboardBtn" alignment="BASELINE_LEFT" onAction="#openDashBoard" prefHeight="45.0" prefWidth="220.0" styleClass="active" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fx:id="dashBoardIcon" fill="WHITE" glyphName="VIEW_DASHBOARD" size="24" styleClass="iconActive" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="sandwichesBtn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="242.0" onAction="#openSandwichesPane" prefHeight="45.0" prefWidth="220.0" text="Sandwiches" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fx:id="sandwichesIcon" fill="WHITE" glyphName="SALE" size="24" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="africanDishBtn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="287.0" onAction="#openAfricanDishPane" prefHeight="45.0" prefWidth="220.0" text="African Dish" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="africanDishIcon" fill="WHITE" glyphName="USERS" size="24" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="drinksBtn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="332.0" onAction="#openDrinksPane" prefHeight="45.0" prefWidth="220.0" text="Drinks" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView fx:id="drinksIcon" fill="WHITE" glyphName="USERS" size="24" text="" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="intercontinentalBtn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="377.0" onAction="#openIntercontinentalPane" prefHeight="45.0" prefWidth="220.0" text="Intercontinental Dish" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fx:id="intercontinentalcon" fill="WHITE" glyphName="SCALE" size="24" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="othersBtn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="422.0" onAction="#openOthersPane" prefHeight="45.0" prefWidth="220.0" text="Others" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fx:id="othersIcon" fill="WHITE" glyphName="SALE" size="24" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="settingsBtn" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="452.0" onAction="#openSettingsPane" prefHeight="45.0" prefWidth="220.0" text="Settings" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Light" size="16.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fx:id="settingsIcon" fill="WHITE" glyphName="SETTINGS" size="24" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow color="#f1a239" />
+         </effect>
+      </VBox>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="1099.0" style="-fx-background-color: #fff;" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="44.0" prefWidth="100.0" styleClass="_tophbar" HBox.hgrow="ALWAYS">
+               <children>
+                  <Text fill="#626262" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to AMULA HUT Management System">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <MenuButton contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="72.0" style="-fx-background-color: transparent;" text=" " textFill="#eb0e0e">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#logOut" text="Logout" />
+               </items>
+               <graphic>
+                  <MaterialDesignIconView fill="#86c01c" glyphName="ACCOUNT_CIRCLE" size="38" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MenuButton>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="dashboardPane" layoutX="198.0" layoutY="58.0" prefHeight="552.0" prefWidth="930.0" style="-fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" visible="false" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <Pane prefHeight="639.0" prefWidth="1012.0" style="-fx-background-color: rgba(265,219,56,0.2);" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <HBox layoutX="14.0" layoutY="60.0" prefHeight="230.0" prefWidth="985.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="60.0">
+               <children>
+                  <GridPane styleClass="allsubpane" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints fillHeight="false" valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/2017-12-07.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" styleClass="allsubpane" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/1535381022192.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" styleClass="allsubpane" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/SL2.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <Pane prefHeight="48.0" prefWidth="985.0" style="-fx-background-radius: 5; -fx-background-color: linear-gradient(to left,#f7ca3d 40%,#db0318);" styleClass="elevator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text fill="WHITE" layoutX="44.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food DashBoard">
+                     <font>
+                        <Font name="Segoe UI" size="19.0" />
+                     </font>
+                  </Text>
+                  <OctIconView fill="WHITE" glyphName="MORTAR_BOARD" layoutX="11.0" layoutY="34.0" size="29" />
+               </children>
+            </Pane>
+            <HBox layoutX="24.0" layoutY="70.0" prefHeight="230.0" prefWidth="985.0" spacing="15.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <GridPane styleClass="allsubpane" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints fillHeight="false" valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Strawberries%20wipped%20Cream.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="10.0" layoutY="10.0" styleClass="allsubpane" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/IMG-20171123-WA0003.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="503.0" layoutY="10.0" styleClass="allsubpane" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pexels-photo-551997.jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/style.css" />
+      <URL value="@../css/style%20(2).css" />
+   </stylesheets>
+</AnchorPane>
